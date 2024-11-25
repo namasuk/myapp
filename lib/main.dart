@@ -15,9 +15,22 @@ class MyApp extends StatelessWidget {
           title: const Text(appTitle),
         ),
         body: const Center(
-          child: Text('Hello World'),
+          child: TitleSection(name:'テストです'),
         ),
       ),
     );
+  }
+}
+
+class TitleSection extends StatelessWidget {
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:815430243.
+  const TitleSection({super.key,required this.name});
+
+  final String name;
+
+  @override
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:4189906564.
+  Widget build(BuildContext context) {
+    return Text(name);
   }
 }
